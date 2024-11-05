@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+  {% block content %}
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="col-8 " style="background-color:aqua;margin:50px;border:solid;">
+  {{ form.as_table }}
+  <input type="submit" value="Edit product" class="btn btn-danger">
+    </div>
+</form>
+
+{% endblock %}
